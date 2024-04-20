@@ -28,14 +28,14 @@ export const authOptions = {
         console.log(existingUser && existingUser.password);
 
         if (existingUser) {
-          const passwordValidation = await bcrypt.compare(
-            credentials.password, // pradhumn
-            existingUser.password // unhashed (hashing -> unhashing) odahnuefh g
-          );
+          // const passwordValidation = await bcrypt.compare(
+          //   credentials.password, // pradhumn
+          //   existingUser.password // unhashed (hashing -> unhashing) odahnuefh g
+          // );
 
           // jugaad - jabtak no seed script OR signup
-          // const passwordValidation =
-          //   credentials.password === existingUser.password ? true : false;
+          const passwordValidation =
+            credentials.password === existingUser.password ? true : false;
 
           if (passwordValidation) {
             return {

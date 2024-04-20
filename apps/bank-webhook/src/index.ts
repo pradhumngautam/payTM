@@ -2,6 +2,8 @@ import express from "express";
 import db from "@repo/db/client";
 const app = express();
 
+const PORT = 3001;
+
 app.use(express.json());
 
 app.post("/hdfcWebhook", async (req, res) => {
@@ -51,4 +53,10 @@ app.post("/hdfcWebhook", async (req, res) => {
   }
 });
 
-app.listen(3003);
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "Health Check OK!" });
+});
+
+app.listen(PORT, () => {
+  console.log(`Live on localhost:${PORT}`);
+});
