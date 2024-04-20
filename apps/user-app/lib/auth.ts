@@ -33,7 +33,7 @@ export const authOptions = {
             existingUser.password // unhashed (hashing -> unhashing) odahnuefh g
           );
 
-          // jugaad - jabtak no seed script OR signup 
+          // jugaad - jabtak no seed script OR signup
           // const passwordValidation =
           //   credentials.password === existingUser.password ? true : false;
 
