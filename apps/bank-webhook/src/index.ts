@@ -2,7 +2,7 @@ import express from "express";
 import db from "@repo/db/client";
 const app = express();
 
-const PORT = 3001;
+const PORT = 3002;
 
 app.use(express.json());
 
@@ -61,4 +61,3 @@ app.listen(PORT, () => {
   console.log(`Live on localhost:${PORT}`);
 });
 
-//error
